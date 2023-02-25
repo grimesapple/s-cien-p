@@ -19,16 +19,14 @@
 	            href="${ctx}/list-${c.categoryCode}">${c.categoryName}</a></li>
             </#html:if>
         </#html:foreach>
-        <li><a href="http://jeesite.com" target="_blank">官方网站</a></li>
-        <li><a href="http://s.jeesite.com" target="_blank">技术服务</a></li>
-        <li id="siteSwitch" class="dropdown">
+        <!--<li id="siteSwitch" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="站点">子站切换 <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <#html:foreach items="${siteList()}" var="site,status">
               <li><a href="#" onclick="location='${ctx}/index-${site.id}'">${site.title}</a></li>
             </#html:foreach>
           </ul>
-        </li>
+        </li>-->
         <!-- <li id="themeSwitch" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="主题切换"><i class="glyphicon glyphicon-th-large"></i></a>
           <ul class="dropdown-menu">
@@ -36,14 +34,24 @@
           </ul>
         </li> -->
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+<!--      <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left nav-search" action="${ctx}/search">
             <div class="form-group">
               <input type="text" name="q" class="form-control" placeholder="全站搜索...">
             </div>
             <button type="submit" class="btn btn-primary hide">搜索</button>
         </form>
-      </ul>
+      </ul>-->
+    <ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-left nav-search" action="${ctx}/search">
+          <div class="form-group">
+<!--            <input type="text" name="q" class="form-control" placeholder="全站搜索...">-->
+            <button  type="button" class="btn btn-primary">登录</button>
+          </div>
+
+        </form>
+    </ul>
     </div>
   </div>
 </div>
