@@ -10,6 +10,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jeesite.modules.sys.web.LoginController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,6 +52,8 @@ public class FrontController extends BaseController {
 	private ArticleService articleService;
 	@Autowired
 	private CommentService commentService;
+	@Autowired
+	private LoginController loginController;
 
 	/**
 	 * 主站首页
@@ -59,6 +62,15 @@ public class FrontController extends BaseController {
 	public String index(Model model) {
 		return REDIRECT + frontPath + "/index-" + Site.MAIN_SITE_CODE + ".html";
 	}
+
+	/**
+	 * 跳转登录注册页面
+	 */
+	@RequestMapping("login")
+	public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
+		return loginController.login(request,response,model);
+	}
+
 
 	/**
 	 * 站点首页
