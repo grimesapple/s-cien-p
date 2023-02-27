@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="${ctxStatic}/modules/sys/sysLogin.css?${_version}">
 <div class="login-box" style="margin:20px auto 300px auto">
 	<div class="login-logo">
-		<a href="${ctxPath}/web/front/userInfo/userRegister"><b>${@Global.getConfig('productName')}</b>
+		<a href="${ctx}/front/userInfo/userRegister"><b>${@Global.getConfig('productName')}</b>
 			<small>V1.0</small></a>
 	</div>
 	<div class="login-box-body">
@@ -37,10 +37,10 @@
 				<span class="fa fa-user form-control-feedback"></span>
 				<input type="text" id="registeredCapital" name="registeredCapital" class="form-control required" data-msg-required="请填写注册资本" placeholder="注册资本" />
 			</div>
-			<div class="form-group has-feedback">
+	<!--		<div class="form-group has-feedback">
 				<span class="fa fa-user form-control-feedback"></span>
 				<input type="text" id="file" name="file" class="form-control required" data-msg-required="请上传营业执照复印件" placeholder="上传营业执照复印件" />
-			</div>
+			</div>-->
 			<div class="form-group">
 <!--				<span class="fa fa-user form-control-feedback"> 企业成立日期</span>-->
 				<span class="required hide">*</span> ${text('企业成立日期')}：<i class="fa icon-question hide"></i></label>
@@ -67,9 +67,9 @@
 					   equalTo="#reg_password" data-msg-equalTo="填写的密码与登录密码不同."
 					   placeholder="再填一次登录密码" />
 			</div>
-			<div class="form-group has-feedback reg-element reg-mobile reg-email">
+<!--			<div class="form-group has-feedback reg-element reg-mobile reg-email">
 				<#form:validcode id="reg_validCode" name="validCode" isRequired="true" isRemote="true" isLazy="false"/>
-			</div>
+			</div>-->
 			<div class="row">
 				<div class="col-xs-6">
 					<button type="submit" class="btn btn-primary btn-block btn-flat"
