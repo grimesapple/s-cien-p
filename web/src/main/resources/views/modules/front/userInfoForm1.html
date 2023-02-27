@@ -1,0 +1,118 @@
+<% layout('/layouts/default.html', {title: '客户信息表管理', libs: ['validate']}){ %>
+<link rel="stylesheet" href="${ctxStatic}/icheck/1.0/square/blue.css?${_version}">
+<link rel="stylesheet" href="${ctxStatic}/jquery-toastr/2.1/toastr.min.css?${_version}">
+<link rel="stylesheet" href="${ctxStatic}/jquery-plugins/jquery.strength.css?${_version}">
+<link rel="stylesheet" href="${ctxStatic}/modules/sys/sysLogin.css?${_version}">
+<div class="login-box" style="margin:20px auto 300px auto">
+	<div class="login-logo">
+		<a href="${ctxPath}/web/front/userInfo/userRegister"><b>${@Global.getConfig('productName')}</b>
+			<small>V1.0</small></a>
+	</div>
+	<div class="login-box-body">
+		<#form:form id="inputForm" model="${userInfo}" action="${ctx}/front/userInfo/register" method="post" class="form-horizontal">
+<!--		<form id="registerForm" action="${ctx}/web/front/userInfo/register" method="post">-->
+			<div class="form-group has-feedback">
+				<span class="fa fa-user form-control-feedback"></span>
+				<input type="text" id="username" name="username" class="form-control required" data-msg-required="请填写税号." placeholder="税号(登录账号)" />
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-info form-control-feedback"></span>
+				<input type="text" id="company" name="company" class="form-control required" data-msg-required="请填写单位名称." placeholder="单位名称" />
+			</div>
+			<div class="form-group has-feedback reg-element reg-email">
+				<span class="fa fa-envelope form-control-feedback"></span>
+				<input type="text" id="industry" name="industry" class="form-control required" data-msg-required="请填写所属行业." placeholder="所属行业" />
+			</div>
+			<div class="form-group has-feedback reg-element reg-mobile">
+				<span class="fa fa-phone-square form-control-feedback"></span>
+				<input type="text" id="reg_mobile" name="mobile" class="form-control required" data-msg-required="请填写手机号码." placeholder="手机号码" />
+			</div>
+			<input type="hidden" id="phone" name="phone" value="member" />
+
+			<div class="form-group has-feedback">
+				<span class="fa fa-user form-control-feedback"></span>
+				<input type="text" id="linkman" name="linkman" class="form-control required" data-msg-required="请填写联系人" placeholder="联系人" />
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-user form-control-feedback"></span>
+				<input type="text" id="registeredCapital" name="registeredCapital" class="form-control required" data-msg-required="请填写注册资本" placeholder="注册资本" />
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-user form-control-feedback"></span>
+				<input type="text" id="file" name="file" class="form-control required" data-msg-required="请上传营业执照复印件" placeholder="上传营业执照复印件" />
+			</div>
+			<div class="form-group">
+<!--				<span class="fa fa-user form-control-feedback"> 企业成立日期</span>-->
+				<span class="required hide">*</span> ${text('企业成立日期')}：<i class="fa icon-question hide"></i></label>
+				<#form:input path="setUpDatetime" readonly="true" maxlength="20" class="form-control laydate"
+				dataFormat="datetime" data-type="datetime" data-format="yyyy-MM-dd HH:mm"/>
+<!--				<input type="text" id="creatTime" name="loginCode" class="form-control required" data-msg-required="请填写企业成立日期" placeholder="企业成立日期" />-->
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-user form-control-feedback"></span>
+				<input type="text" id="address" name="loginCode" class="form-control required" data-msg-required="请填写企业地址" placeholder="企业地址" />
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-lock form-control-feedback"></span>
+				<input type="password" autocomplete="off" id="reg_password" name="password"
+					   class="form-control required" data-msg-required="请填写登录密码."
+					   rangelength="3,50" data-msg-rangelength="登录密码长度不能小于3并大于50个字符."
+					   placeholder="登录密码" />
+			</div>
+			<div class="form-group has-feedback">
+				<span class="fa fa-lock form-control-feedback"></span>
+				<input type="password" autocomplete="off" id="reg_confirmPassword" name="confirmPassword"
+					   class="form-control required" data-msg-required="请再填一次登录密码."
+					   rangelength="3,50" data-msg-rangelength="登录密码长度不能小于3并大于50个字符."
+					   equalTo="#reg_password" data-msg-equalTo="填写的密码与登录密码不同."
+					   placeholder="再填一次登录密码" />
+			</div>
+			<div class="form-group has-feedback reg-element reg-mobile reg-email">
+				<#form:validcode id="reg_validCode" name="validCode" isRequired="true" isRemote="true" isLazy="false"/>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<button type="submit" class="btn btn-primary btn-block btn-flat"
+							id="btnSubmit">${text('提交')}</button>
+				</div>
+				<div class="col-xs-6">
+					<button type="button" class="btn btn-default btn-block btn-flat"
+							id="btnReset">${text('返回')}</button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+<!--		</form>-->
+	</#form:form>
+	</div>
+	<div class="login-copyright">
+		&copy; ${@DateUtils.getYear()} ${@Global.getConfig('productName')} - Powered By <a
+			id="loginKey" data-key="${@Global.getConfig('shiro.loginSubmit.secretKey')}"
+			href="#" target="_blank">科技有限公司 V1.0</a>
+	</div>
+</div>
+
+</div>
+<% } %>
+<script src="${ctxStatic}/common/des.js?${_version}"></script>
+<script src="${ctxStatic}/jquery-toastr/2.1/toastr.min.js?${_version}"></script>
+<script src="${ctxStatic}/jquery-plugins/jquery.strength.js?${_version}"></script>
+<script src="${ctxStatic}/jquery-plugins/jquery.strength_i18n.js?${_version}"></script>
+<script src="${ctxStatic}/modules/sys/registerUser.js?${_version}"></script>
+<script>
+$("#inputForm").validate({
+	submitHandler: function(form){
+		js.ajaxSubmitForm($(form), function(data){
+			js.showMessage(data.message);
+			console.log("===============")
+			if(data.result == Global.TRUE){
+				setTimeout(function(){
+					js.closeCurrentTabPage(function(contentWindow){
+						contentWindow.page();
+					});
+				},3000)
+
+			}
+		}, "json");
+    }
+});
+</script>
