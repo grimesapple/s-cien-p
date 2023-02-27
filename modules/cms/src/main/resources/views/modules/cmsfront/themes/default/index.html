@@ -1,23 +1,2566 @@
 <% layout('layouts/default.html', {title:site.siteName+'-首页', libs: []}){ %>
-<div class="row">
-    <div class="col-lg-12">
+<!--<div class="row">-->
+<!--    <div class="col-lg-12">-->
+<!--        <h1 class="h2">111111111111111111</h1>-->
+<!--        <h1 class="h2">111111111111111111</h1>-->
+<!--    </div>-->
+<!--</div>-->
 
-    </div>
-</div>
+<link rel="stylesheet" href="/js/static/adminlte/css/reset.css?${_version}">
+<link rel="stylesheet" href="/js/static/adminlte/css/index.css?${_version}">
 
-<#html:foreach items="${categoryList(site.siteCode, '0', 3, '')}" var="category,status">
-<#html:if test="${category.moduleType == 'article'}">
-<div class="row">
-    <div class="col-lg-12">
-        <div class="bs-component">
-            <h1 class="h1">${category.categoryName}</h1>
+<!--<link rel="stylesheet" href="${ctxStatic}/modules/sys/sysLogin.css?${_version}">-->
+
+<style>
+    
+</style>
+
+<main class="wrap">
+
+    <section class="sec-banner">
+
+    </section>
+
+    <section class="intro_block bg_lt_white po_r">
+        <div class="quick_jump" style="display: none">
+            <div id="quick_jump_t" class="quick_jump_t">
+                <a href="#list8" class="bg_quick_jump00"><i class="icon_quick_jump00"></i></a>
+                <div class="quick_jump_box">
+                    <ul>
+                        <li><a href="#list1" class="bg_quick_jump01"><i class="icon_quick_jump01"></i></a></li>
+                        <li><a href="#list2" class="bg_quick_jump02"><i class="icon_quick_jump02"></i></a></li>
+                        <li><a href="#list3" class="bg_quick_jump03"><i class="icon_quick_jump03"></i></a></li>
+                        <li><a href="#list4" class="bg_quick_jump04"><i class="icon_quick_jump04"></i></a></li>
+                        <li><a href="#list5" class="bg_quick_jump05"><i class="icon_quick_jump05"></i></a></li>
+                    </ul>
+                </div>
+                <a href="#" class="bg_quick_jump09"><i class="icon_quick_jump09"></i></a>
+            </div>
         </div>
-        <div>
+        <div class="intro_block_cont" id="list1">
+            <h2>热门推荐</h2>
+            <div class="date_wrap" id="data_wrap_extend">
+                <ul>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/inno-resource/prjd/prjdIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="xm_count">953</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">项目</p></li>
+                    <li class="date_li01"><i class="date_fg"></i></li>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/inno-resource/paper/paperIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="lw_count">20,593</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">论文</p></li>
+                    <li class="date_li01"><i class="date_fg"></i></li>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/tec-market/tec?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="zl_count">22,602</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">专利</p></li>
+                    <li class="date_li01"><i class="date_fg"></i></li>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/inno-resource/expert/expertIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="zj_count">1,177</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">专家</p></li>
+                    <li class="date_li01"><i class="date_fg"></i></li>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/inno-resource/company/companyIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="jg_count">875</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">企业</p></li>
+                    <li class="date_li01"><i class="date_fg"></i></li>
+                    <li style="min-width:129px;width: auto;"><p class="f999">
+                        <a href="/egrantweb/ply/getplydstatute?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank"><span id="zc_count">1</span></a>&nbsp;项
+                    </p>
+                        <p class="p1">政策</p></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <div class="intro_block bg_lt_blue" id="list3">
+        <div class="intro_block_cont">
+            <h2>科创资金</h2>
+            <div>
+                <div class="Menubox_1">
+                    <ul>
+
+
+
+                        <li title="科技专项" class="hover" id="one1" onclick="setTab('one','1','4')"><span class="index_icon_box"><i class="index_icon01"></i></span>
+                            <p "="">科技专项</p>
+                            <div class="triangle">
+                                <em></em><span></span>
+                            </div></li>
+
+
+                        <li title="创新专项" id="one2" onclick="setTab('one','2','4')"><span class="index_icon_box"><i class="index_icon02"></i></span>
+                            <p "="">创新专项</p>
+                            <div class="triangle">
+                                <em></em><span></span>
+                            </div></li>
+
+
+                        <li title="创新平台载体" id="one3" onclick="setTab('one','3','4')"><span class="index_icon_box"><i class="index_icon03"></i></span>
+                            <p "="">创新平台载体</p>
+                            <div class="triangle">
+                                <em></em><span></span>
+                            </div></li>
+
+
+                        <li title="指导性计划" id="one4" onclick="setTab('one','4','4')"><span class="index_icon_box"><i class="index_icon04"></i></span>
+                            <p "="">指导性计划</p>
+                            <div class="triangle">
+                                <em></em><span></span>
+                            </div></li>
+
+
+                    </ul>
+                </div>
+                <div class="Contentbox_1">
+
+
+                    <div id="con_one_1" class="hover">
+                        <table border="0" cellpadding="0" cellspacing="0" class="money_tab mb15">
+
+
+
+
+
+
+
+
+
+                            <tbody><tr>
+                                <td style="width:285px;">2022年度吉安市“揭榜挂帅”企业重大技术需求申报-新材料、新能源</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-10-22~2022-10-22</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('5a3b018b709746b8918de8d7c6b45a0e')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('0f0a377877f343eb8962e42e4a97b645')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022年度吉安市“揭榜挂帅”企业重大技术需求申报-电子信息</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-10-22~2022-10-22</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('d581997007274793acf02733d176c539')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('ff102e41a42b46a39f7bfe2146be67c6')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022年吉安市科技计划专项-农业及乡村振兴类</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-10-17~2022-11-01</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('423e9509e7fc45199aa3533498ce27d9')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('eda07a5d109742aaa09b2a7830dbb34c')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022年吉安市科技计划专项-工业类（新材料、新能源、先进装备制造）</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-10-17~2022-11-01</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('82dc4ede7f074c758443588d322c727d')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('40407aedf9df444fa98a9047a3f27fe7')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022年吉安市科技计划专项-工业类（生物医药、绿色食品）</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-10-17~2022-11-01</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('e4cf7f253dc740c183f50ee97da325d9')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('bb024105b2f24d57a1f3a8ebb5e31f48')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+                            </tbody></table>
+                    </div>
+
+
+                    <div id="con_one_2" style="display: none">
+                        <table border="0" cellpadding="0" cellspacing="0" class="money_tab mb15">
+
+
+
+
+
+
+
+
+
+                            <tbody><tr>
+                                <td style="width:285px;">吉安市星创天地</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-09-28~2022-10-12</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('a5b349970e2947488a2f3c59f4fce746')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('d4abaa95b6ab4d26921e8fa5e903198f')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+                            </tbody></table>
+                    </div>
+
+
+                    <div id="con_one_3" style="display: none">
+                        <table border="0" cellpadding="0" cellspacing="0" class="money_tab mb15">
+
+
+
+
+
+
+
+
+
+                            <tbody><tr>
+                                <td style="width:285px;">2022年吉安市产业技术创新战略联盟</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-09-28~2022-10-16</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('590714be9e7a4a6db22f02209cc13153')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('eb971ab163b4413e80c8df8a8c7f8642')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022年吉安市科技企业孵化器、众创空间</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-09-03~2022-09-20</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('e8b13da337cb4d53a06d677c1eb49ba9')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('17713c63e2604dcc94de4d944adcc8be')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">2022 年吉安市技术创新中心 （重点实验室）</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-07-29~2022-09-03</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('d5242cd325594455896d41150e1bb08f')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('b45ca194ac084fa69dd5d12a4bae37be')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">吉安市临床医学研究中心</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2021-10-11~2021-11-11</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('09f2a82a294d42a89230aac179e1a927')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('e2ff5be96134453fbbf7867f2cf7821b')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+
+
+                            <tr>
+                                <td style="width:285px;">吉安市产业技术创新战略联盟</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2021-10-11~2021-11-11</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('0390b762e5a44e45ab9774615b3f237e')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('6bb44279fa8e4a84b1bc8e0a40f0468f')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+                            </tbody></table>
+                    </div>
+
+
+                    <div id="con_one_4" style="display: none">
+                        <table border="0" cellpadding="0" cellspacing="0" class="money_tab mb15">
+
+
+
+
+
+
+
+
+
+                            <tbody><tr>
+                                <td style="width:285px;">吉安市指导性科技计划项目申报书、合同书</td>
+                                <td style="width:160px;" align="center"><span class="f999 ft12">2022-03-21~2022-04-22</span></td>
+                                <td style="width:200px;" align="center">
+                                    <div class="contact_type_pop">
+                                        <a href="#"><i class="icon18_01"></i>联系方式</a>
+                                        <div class="contact_type_cont">
+                                            <div class="contact_type_arrow">
+                                                <em></em><span></span>
+                                            </div>
+                                            <p>
+                                                联系电话：<br>（无）
+                                            </p>
+                                            <p>
+                                                电子邮箱：<br>（无）
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+                                    <a onclick="viewFile('46b0af49dcbb4c3fa55de85f4a00fd76')"><i class="icon18_02"></i>申报指南</a>
+
+
+                                </td>
+                                <td style="width:140px;" align="center">
+
+
+
+                                    <a onclick="viewFile('3d04934472584945b0ba9d22d6837079')"><i class="icon18_03"></i>申报样板</a>
+
+
+                                </td>
+                                <td style="width:135px;" align="center">
+
+
+
+
+                                    <a onclick="viewFile('')"><i class="icon18_03"></i>报告提纲</a>
+
+
+                                </td>
+
+                                <td style="width:145px;" align="center">
+
+
+
+                                    <a onclick="loginByNewWin('50','%2BVlban9%2F1tXLIQclEzLSaw%3D%3D','','jasstms')"><i class="icon18_04"></i>在线申报</a>
+
+
+
+
+                                </td>
+                            </tr>
+
+                            </tbody></table>
+                    </div>
+
+
+                </div>
+            </div>
+            <a href="/egrantweb/innoweb-fund/getfundList?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+        </div>
+    </div>
+
+    <div class="intro_block bg_lt_white" id="list4">
+        <div class="intro_block_cont">
+            <h2>创新资源</h2>
+            <div id="Tab_2">
+                <div class="Menubox_1">
+                    <ul>
+                        <li id="four1" onclick="setTab('four',1,5)">
+                            <span class="index_icon_box"><i class="index_icon07"></i></span>
+                            <p>项目</p>
+                            <div class="triangle">
+                                <em></em><span class="triangle_span1"></span>
+                            </div>
+                        </li>
+                        <li id="four2" onclick="setTab('four',2,5)"><span class="index_icon_box"><i class="index_icon10"></i></span>
+                            <p>成果</p>
+                            <div class="triangle">
+                                <em></em><span class="triangle_span1"></span>
+                            </div></li>
+                        <li class="hover" id="four3" onclick="setTab('four',3,5)"><span class="index_icon_box"><i class="index_icon11"></i></span>
+                            <p>专家</p>
+                            <div class="triangle">
+                                <em></em><span class="triangle_span1"></span>
+                            </div></li>
+                        <li id="four4" onclick="setTab('four',4,5)"><span class="index_icon_box"><i class="index_icon12"></i></span>
+                            <p>企业</p>
+                            <div class="triangle">
+                                <em></em><span class="triangle_span1"></span>
+                            </div></li>
+                        <li id="four5" onclick="setTab('four',5,5)"><span class="index_icon_box"><i class="index_icon13"></i></span>
+                            <p>科研单位</p>
+                            <div class="triangle">
+                                <em></em><span class="triangle_span1"></span>
+                            </div></li>
+                    </ul>
+                </div>
+                <div class="Contentbox_1">
+                    <div id="con_four_1" style="display: none">
+                        <div class="common_wrap" id="con_three_bak">
+
+                            <ul>
+                                <li class="fl"><a href="javascript:void(0);" class="project_bg" style="cursor: default;"><i class="tag">项目</i><img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file.jpg"></a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a href="javascript:void(0);" style="cursor: default;"><b>江西省红壤丘陵区农业环境污染防控重点实验室</b></a>
+                                        </p>
+                                        <p class="p2">江西省科学技术厅,省重点实验室</p>
+                                        <p class="p3">2020年
+                                        </p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fr"><a href="javascript:void(0);" class="project_bg" style="cursor: default;"><i class="tag">项目</i><img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file.jpg"></a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a href="javascript:void(0);" style="cursor: default;"><b>七叶一枝花田间育苗及种植示范</b></a>
+                                        </p>
+                                        <p class="p2">江西省科学技术厅,科技扶贫</p>
+                                        <p class="p3">2020年
+                                        </p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fl"><a href="javascript:void(0);" class="project_bg" style="cursor: default;"><i class="tag">项目</i><img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file.jpg"></a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a href="javascript:void(0);" style="cursor: default;"><b>5G大规模Massive MIMO高频毫米波阵列天线的关键技术研发</b></a>
+                                        </p>
+                                        <p class="p2">江西省科学技术厅,重点项目（定向择优）</p>
+                                        <p class="p3">2020年
+                                        </p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fr"><a href="javascript:void(0);" class="project_bg" style="cursor: default;"><i class="tag">项目</i><img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file.jpg"></a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a href="javascript:void(0);" style="cursor: default;"><b>基于边缘计算的三相负荷不平衡自动调节系统</b></a>
+                                        </p>
+                                        <p class="p2">江西省科学技术厅,重点项目（公开竞争）</p>
+                                        <p class="p3">2020年
+                                        </p>
+
+                                    </div></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div id="con_four_2" style="display: none">
+                        <div class="common_wrap">
+
+                            <ul>
+                                <li class="fl"><a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/SX2r62','dnNIyvlaICNMohhkXZqTnQ%3D%3D')" target="_blank" class="project_bg" style="border: 0;">
+                                    <img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file_img.jpg">
+                                </a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/SX2r62','dnNIyvlaICNMohhkXZqTnQ%3D%3D')" target="_blank">“学”与“术”之间——论浙中王门与江右王门的异同及其影响</a>
+                                        </p>
+                                        <p class="p2">
+
+
+
+                                            ,2019
+                                        </p>
+                                        <p class="p2"></p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fr"><a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/QdHnbF','PlDH0pBNekL4eA54N7JWjw%3D%3D')" target="_blank" class="project_bg" style="border: 0;">
+                                    <img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file_img.jpg">
+                                </a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/QdHnbF','PlDH0pBNekL4eA54N7JWjw%3D%3D')" target="_blank">野生荞麦细柄野荞麦的繁殖生物学特性研究</a>
+                                        </p>
+                                        <p class="p2">
+
+
+
+                                            ,2019
+                                        </p>
+                                        <p class="p2"></p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fl"><a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/cqAjzC','v4ndbK7pI4O0PxCM0ngBTQ%3D%3D')" target="_blank" class="project_bg" style="border: 0;">
+                                    <img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file_img.jpg">
+                                </a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/cqAjzC','v4ndbK7pI4O0PxCM0ngBTQ%3D%3D')" target="_blank">中央苏区红色漫画基本特征论析</a>
+                                        </p>
+                                        <p class="p2">
+
+
+
+                                            ,2019
+                                        </p>
+                                        <p class="p2"></p>
+
+                                    </div></li>
+                            </ul>
+
+                            <ul>
+                                <li class="fr"><a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/4SwOsk','OodDfX9hkzvwP4wXZ3xFBw%3D%3D')" target="_blank" class="project_bg" style="border: 0;">
+                                    <img src="/js/static/adminlte//js/static/adminlte/img/index/file_icon/file_img.jpg">
+                                </a>
+                                    <div class="common_lt common_lt1">
+                                        <p class="p1">
+                                            <a onclick="gotoScmDataHomePage('paper','https://www.scholarmate.com/SI/4SwOsk','OodDfX9hkzvwP4wXZ3xFBw%3D%3D')" target="_blank">图像区域分割算法综述及比较</a>
+                                        </p>
+                                        <p class="p2">
+
+
+
+                                            ,2019
+                                        </p>
+                                        <p class="p2"></p>
+
+                                    </div></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div id="con_four_3" class="hover">
+                        <div class="common_wrap">
+                            <ul>
+
+
+                                <li class="fl"><a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/Qr63Mf','DDAHUF9ybkQSTzpkjLTxUg%3D%3D')" target="_blank" class="tx"><img src="https://www.scholarmate.com/avatars/8c/a8/05/1000000241075.png?A=D4Tq"></a>
+                                    <div class="common_lt">
+                                        <p class="p1">冷明<span>
+												</span></p>
+                                        <p class="p2">井冈山大学,冷明</p>
+                                        <p class="p2" title="计算机">
+
+
+                                            <span class="attribute">计算机</span>
+
+                                        </p>
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/Qr63Mf','DDAHUF9ybkQSTzpkjLTxUg%3D%3D')" target="_blank" class="border_btn">专家主页</a>
+                                        </p>
+                                    </div></li>
+
+
+                                <li class="fr"><a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/3qUve2','Q6%2FkPx1uLreJXFO5zQUhzg%3D%3D')" target="_blank" class="tx"><img src="https://www1.scholarmate.com/avatars/25/d1/e0/1000000423001.jpg"></a>
+                                    <div class="common_lt">
+                                        <p class="p1">谢世坤<span>
+												</span></p>
+                                        <p class="p2">井冈山大学,谢世坤</p>
+                                        <p class="p2" title="化学,材料科学,矿山冶金,机械工程">
+
+
+                                            <span class="attribute">化学</span>
+
+                                            <span class="attribute">材料科学</span>
+
+                                            <span class="attribute">矿山冶金</span>
+
+                                            <span class="attribute">机械工程</span>
+
+                                        </p>
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/3qUve2','Q6%2FkPx1uLreJXFO5zQUhzg%3D%3D')" target="_blank" class="border_btn">专家主页</a>
+                                        </p>
+                                    </div></li>
+
+
+                                <li class="fl"><a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/IFbYNr','rMwfMja3%2FxuvZumd3J9EHw%3D%3D')" target="_blank" class="tx"><img src="https://www.scholarmate.com/avatars/e8/86/87/1000000722711.png?A=DnFX"></a>
+                                    <div class="common_lt">
+                                        <p class="p1">孙凌宇<span>
+												</span></p>
+                                        <p class="p2">井冈山大学,孙凌宇</p>
+                                        <p class="p2" title="">
+
+
+                                            <span class="attribute"></span>
+
+                                        </p>
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/IFbYNr','rMwfMja3%2FxuvZumd3J9EHw%3D%3D')" target="_blank" class="border_btn">专家主页</a>
+                                        </p>
+                                    </div></li>
+
+
+                                <li class="fr"><a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/vIneA3','a%2BIkV6ugWKvyD%2FOqewejKg%3D%3D')" target="_blank" class="tx"><img src="https://www.scholarmate.com/avatars/28/0a/2e/1000002058415.png?A=DaH3"></a>
+                                    <div class="common_lt">
+                                        <p class="p1">阮文<span>
+												</span></p>
+                                        <p class="p2">井冈山大学,阮文</p>
+                                        <p class="p2" title="">
+
+
+                                            <span class="attribute"></span>
+
+                                        </p>
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('expert','https://www.scholarmate.com/P/vIneA3','a%2BIkV6ugWKvyD%2FOqewejKg%3D%3D')" target="_blank" class="border_btn">专家主页</a>
+                                        </p>
+                                    </div></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="con_four_4" style="display: none">
+                        <div class="common_wrap">
+                            <ul>
+
+                                <li class="fl">
+
+                                    <a onclick="gotoScmDataHomePage('company','https://1149881.scholarmate.com','AYluDThwgGk%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/62/e2/3d/1149881.png?A=Dxy6">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">江西新天地药业有限公司</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西峡江工业园城南园区月华路</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('company','https://1149881.scholarmate.com','AYluDThwgGk%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fr">
+
+                                    <a onclick="gotoScmDataHomePage('company','https://1154260.scholarmate.com','cpvBkkE4FSw%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/e3/b0/6c/1154260.png?A=D0J1">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">江西广源化工有限责任公司</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西省永丰县工业园南区</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('company','https://1154260.scholarmate.com','cpvBkkE4FSw%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fl">
+
+                                    <a onclick="gotoScmDataHomePage('company','https://1152749.scholarmate.com','0fEIDe4aCqs%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/19/58/a3/1152749.png?A=Dh6x">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">江西吉安国泰特种化工有限责任公司</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西省吉安县安塘乡</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('company','https://1152749.scholarmate.com','0fEIDe4aCqs%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fr">
+
+                                    <a onclick="gotoScmDataHomePage('company','https://1151076.scholarmate.com','XuQdoSGo5QU%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/6f/47/3e/1151076.png?A=Dz6u">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">江西天人生态股份有限公司</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西省吉安市井冈山经济技术开发区</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('company','https://1151076.scholarmate.com','XuQdoSGo5QU%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="con_four_5" style="display: none">
+                        <div class="common_wrap">
+                            <ul>
+
+                                <li class="fl">
+
+                                    <a onclick="gotoScmDataHomePage('college','https://jgsu.scholarmate.com','THGW21PxfWI%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/sielogo01/1231.jpg">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">井冈山大学</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">吉安市青原区学苑路28号</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('college','https://jgsu.scholarmate.com','THGW21PxfWI%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fr">
+
+                                    <a onclick="gotoScmDataHomePage('college','https://celaj.scholarmate.com','oqD%2F%2BouGn34%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/e5/2f/a1/22078.png?A=DdBh">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">中国井冈山干部学院</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西吉安市井冈山茨坪红军北路6号</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('college','https://celaj.scholarmate.com','oqD%2F%2BouGn34%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fl">
+
+                                    <a onclick="gotoScmDataHomePage('college','https://1150343.scholarmate.com','VkfTcyWLGH8%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/b9/78/84/1150343.png?A=DHFb">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">吉安市中心人民医院</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西省吉安市吉州区井冈山大道106号</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('college','https://1150343.scholarmate.com','VkfTcyWLGH8%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="fr">
+
+                                    <a onclick="gotoScmDataHomePage('college','https://1149548.scholarmate.com','PjwV4E6sS6U%3D')" class="tx">
+
+
+
+                                        <img src="https://sie.scholarmate.com/sielogo/69/db/52/1149548.png?A=DoLf">
+
+
+
+
+
+                                    </a>
+                                    <div class="common_lt">
+                                        <p class="p1">井冈山大学附属医院</p>
+                                        <p class="p2"></p>
+                                        <p class="p3">江西省吉安市吉州区井冈山大道110号</p>
+                                        <!--                              <p class="p3">中国广东省广州市白云区永泰工业园曙光社</p> -->
+                                        <p>
+                                            <a onclick="gotoScmDataHomePage('college','https://1149548.scholarmate.com','PjwV4E6sS6U%3D')" class="border_btn">机构主页</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 项目 -->
+            <a id="prja" href="/egrantweb/inno-resource/prjd/prjdIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+            <!-- 论文 -->
+            <a style="display:none" id="papera" href="/egrantweb/inno-resource/paper/paperIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+            <!-- 专家 -->
+            <a style="display:none" id="experta" href="/egrantweb/inno-resource/expert/expertIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+            <!-- 机构 -->
+
+            <!-- 企业 -->
+            <a style="display:none" id="orgda" href="/egrantweb/inno-resource/company/companyIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+            <!-- 大学 -->
+            <a style="display:none" id="orgdaCollege" href="/egrantweb/inno-resource/orgd/orgdIndex?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank" class="read_more">查看更多</a>
+        </div>
+    </div>
+
+    <div class="intro_block bg_lt_blue qh_tab" id="list5">
+        <div class="intro_block_cont">
+            <h2>技术转移</h2>
+            <div id="dynamic1" class="patent">
+                <h3 class="dynamic_big_tit" title="技术转让">技术转让</h3>
+                <div class="index_tab">
+                    <ul id="dynamic_tit1" class="patent_tit">
+                        <li class="current" title="节能环保">节能环保</li>
+                        <li title="新能源">新能源</li>
+                        <li title="新材料">新材料</li>
+                        <li title="环境资源">环境资源</li>
+                        <li title="装备制造">装备制造</li>
+                        <li title="信息技术">信息技术</li>
+                    </ul>
+                </div>
+                <div id="dynamic_lt1" class="patent_lt">
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=GJoKLV9MEUk%3D','5cq2TOL5CS0%3D')" target="_blank"> <!-- <a href="/js/static/adminlte//js/static/adminlte/img/index/index/technology_"+(indexC.index+1) target="_blank"> -->
+                                    <img src="https://www.innocity.com//archivefiles/c3/5d/4a/04723676a4bf4c8298e25c5ad68c3d5d.png">
+
+                                </a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=GJoKLV9MEUk%3D','5cq2TOL5CS0%3D')" target="_blank">三效强制循环蒸发系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>节能环保</span>
+
+                                </div>
+                                <h4>张伟<span class="f999">（江西新金叶实业有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=eh6fRm4rqOA%3D','MZpzM35cxnM%3D')" target="_blank"> <!-- <a href="/js/static/adminlte//js/static/adminlte/img/index/index/technology_"+(indexC.index+1) target="_blank"> -->
+                                    <img src="https://www.innocity.com//archivefiles/7d/0d/e8/3bd2946df71b46aea98221973ce42a5b.jpg">
+
+                                </a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=eh6fRm4rqOA%3D','MZpzM35cxnM%3D')" target="_blank">一种热泳空气净化装置及方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>节能环保</span>
+
+                                </div>
+                                <h4>赵彬<span class="f999">（清华大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=VOmDDpquqmw%3D','FB14PSQScaA%3D')" target="_blank"> <!-- <a href="/js/static/adminlte//js/static/adminlte/img/index/index/technology_"+(indexC.index+1) target="_blank"> -->
+                                    <img src="https://www.innocity.com//archivefiles/53/67/a2/9c6e0c5ffdad475591d6b98b01594f1e.jpg">
+
+                                </a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=VOmDDpquqmw%3D','FB14PSQScaA%3D')" target="_blank">一种换热量可控的汽车尾气热回收装置</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>节能环保</span>
+
+                                </div>
+                                <h4>赵红霞<span class="f999">（山东大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=EgiZ02xrAag%3D','eMv0xDxS01o%3D')" target="_blank"> <!-- <a href="/js/static/adminlte//js/static/adminlte/img/index/index/technology_"+(indexC.index+1) target="_blank"> -->
+                                    <img src="https://www.innocity.com//archivefiles/39/69/11/32c9c092b8424299a53b84c21f4aaa01.png">
+
+                                </a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_save','https://www.innocity.com/onlineweb/patent/zs/show?patentId=EgiZ02xrAag%3D','eMv0xDxS01o%3D')" target="_blank">木质纤维素组分分离的绿色工艺</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>节能环保</span>
+
+                                </div>
+                                <h4>刘云<span class="f999">（北京化工大学）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=6OTssKep8KA%3D','C%2B3ybjRdhME%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/4d/7c/62/6f5e74707a834620a7f2e63d0a24b82c.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=6OTssKep8KA%3D','C%2B3ybjRdhME%3D')" target="_blank">一种太阳能和雨能综合利用的桥梁照明系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>新能源</span>
+
+                                </div>
+                                <h4>丰土根<span class="f999">（河海大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=Br%2BROxxOGqc%3D','YzrhabL%2BBc4%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/a1/0a/86/5fb7e55fad16433aa95ba2a6da748889.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=Br%2BROxxOGqc%3D','YzrhabL%2BBc4%3D')" target="_blank">一种矿区分布式煤矿抽采瓦斯热电冷多联产能源系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>新能源</span>
+
+                                </div>
+                                <h4>林柏泉<span class="f999">（中国矿业大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=QCvLG%2FC7Qp0%3D','loAqXuUaZ3g%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/70/f9/ff/5fdfac4ed43446f2ac9908cf4b8c7b21.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=QCvLG%2FC7Qp0%3D','loAqXuUaZ3g%3D')" target="_blank">太阳光二次反射回收碳纤维装置及其回收方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>新能源</span>
+
+                                </div>
+                                <h4>赵崇军<span class="f999">（华东理工大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=21u0EVSMhRI%3D','kM1NeNW8tLU%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/cf/01/52/268d7a9014a9409181cc7c9acb56fd67.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_source','https://www.innocity.com/onlineweb/patent/zs/show?patentId=21u0EVSMhRI%3D','kM1NeNW8tLU%3D')" target="_blank">太阳能驱动单双效耦合型溴化锂制冷机</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>新能源</span>
+
+                                </div>
+                                <h4>代彦军<span class="f999">（上海交通大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul style="display: none">
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=YKMz0C72iWY%3D','fdAlQp6jX%2Fk%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/58/c4/00/aa85295e34644402875a058079e8bcf4.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=YKMz0C72iWY%3D','fdAlQp6jX%2Fk%3D')" target="_blank">一种AuPd/Fe3O4原位电芬顿催化剂及其制备方法和应用</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>新材料</span>
+
+                                </div>
+                                <h4>兰华春<span class="f999">（中国科学院生态环境研究中心）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=e0GoGnPu%2Bh4%3D','IeqCCSkCmls%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/ce/e9/ee/9d996f428c824854a34e416c5a13c494.JPG"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=e0GoGnPu%2Bh4%3D','IeqCCSkCmls%3D')" target="_blank">一种外科植入物用抗细菌感染锻造钴基合金及其制备方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>新材料</span>
+
+                                </div>
+                                <h4>中国科学院金属研究所<span class="f999">（中国科学院金属研究所）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥100000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=qpyfk0HDJAo%3D','3Pid4io%2B%2BuA%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/7e/0a/fa/4d5db82a15fb48f399d9f0155ae07f04.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=qpyfk0HDJAo%3D','3Pid4io%2B%2BuA%3D')" target="_blank">利用混酸分离铝质岩中的锂元素并制备碳酸锂的方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>新材料</span>
+
+                                </div>
+                                <h4>张杰<span class="f999">（贵州大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=iUHdPcD%2F5xw%3D','8X1zhtoAHWM%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/35/5f/1f/21f37047ab9b40b6b4cd052e8a4f407d.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_meterial','https://www.innocity.com/onlineweb/patent/zs/show?patentId=iUHdPcD%2F5xw%3D','8X1zhtoAHWM%3D')" target="_blank">一种Cu-Al-Mn形状记忆合金梯度功能材料的制备方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>新材料</span>
+
+                                </div>
+                                <h4>黄海友<span class="f999">（北京科技大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=CjS3Tx%2BXnHA%3D','W3A7pb8r8dQ%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/d9/3e/68/06ad6729eab14bc9886d78568c2c6094.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=CjS3Tx%2BXnHA%3D','W3A7pb8r8dQ%3D')" target="_blank">生产尾气除臭设备</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>环境资源</span>
+
+                                </div>
+                                <h4>张伟<span class="f999">（江西新金叶实业有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=DtZNXt03ypk%3D','hE8aiOj8v5M%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/27/ec/3c/5839b3ecd5504f12b24ebc7f30bec4d9.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=DtZNXt03ypk%3D','hE8aiOj8v5M%3D')" target="_blank">分铜反应釜</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>环境资源</span>
+
+                                </div>
+                                <h4>张伟<span class="f999">（江西新金叶实业有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=GgI%2FZ4sUThE%3D','lYefxSl5zCw%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/b4/87/09/443c7222e78a4a1784780580a4a9fbd5.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=GgI%2FZ4sUThE%3D','lYefxSl5zCw%3D')" target="_blank">烟尘冷却沉降系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>环境资源</span>
+
+                                </div>
+                                <h4>张伟<span class="f999">（江西新金叶实业有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=ksot%2FHINrng%3D','9xktcRnDYMk%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/7b/32/10/df6bfa0ab8c9440aa5dd030e0d7a3651.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_environment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=ksot%2FHINrng%3D','9xktcRnDYMk%3D')" target="_blank">一种新型富氧还原炉</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>环境资源</span>
+
+                                </div>
+                                <h4>张伟<span class="f999">（江西新金叶实业有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥50000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=dilWGuMOnJ4%3D','gHtRHYX04Jg%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/d0/c2/33/db778f71891d4123a367804e87b2d1f6.JPG"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=dilWGuMOnJ4%3D','gHtRHYX04Jg%3D')" target="_blank">一种测微准直望远镜</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>航空产业</span>
+
+                                </div>
+                                <h4>鄢绿阳<span class="f999">（江西绿阳光学仪器制造有限公司）</span>
+                                </h4>
+                                <p>
+
+
+                                    <em>¥150000</em>
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=PfGiVHLSBLY%3D','OYK3h4ckFvo%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/28/27/99/eaaab9de65a24547836f00e901fee0e3.jpeg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=PfGiVHLSBLY%3D','OYK3h4ckFvo%3D')" target="_blank">一种空间三转动自由度并联机构</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>航空产业</span>
+
+                                </div>
+                                <h4>宋轶民<span class="f999">（天津大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=oZ9XQiUUieU%3D','zgmXjzBHNKI%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/9f/92/0c/ffbfbd21f5af4c1fa7e1cf021b5833a6.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=oZ9XQiUUieU%3D','zgmXjzBHNKI%3D')" target="_blank">一种高能束增材制造大尺寸金属零部件的设备</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>先进装备制造</span>
+
+                                </div>
+                                <h4>朱海红<span class="f999">（华中科技大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=H2IKXhZKJTY%3D','s4zW6%2B98T28%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/7e/58/31/56f572ffa56d4b5ab138a351bc750125.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_equipment','https://www.innocity.com/onlineweb/patent/zs/show?patentId=H2IKXhZKJTY%3D','s4zW6%2B98T28%3D')" target="_blank">一种车用动力电池内插扁平微热管散热装置</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>装备制造</span>
+
+                                </div>
+                                <h4>陈吉清<span class="f999">（华南理工大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=4W1CIpUg%2F9A%3D','aXraRrHFdOM%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/b0/22/2c/b0fd44a74ddf4c56a781a5fb7b899675.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=4W1CIpUg%2F9A%3D','aXraRrHFdOM%3D')" target="_blank">一种软件看门狗系统及方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>计算机</span>
+
+                                </div>
+                                <h4>章洋<span class="f999">（北京邮电大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=Ddd7hUqVI%2Fo%3D','46ACRUllNTs%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/4f/bf/2f/c5fa1e886ddb4618af7a1a51fb821c93.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=Ddd7hUqVI%2Fo%3D','46ACRUllNTs%3D')" target="_blank">基于栈操作胎记的报税人身份动态认证方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>计算机</span>
+
+                                </div>
+                                <h4>刘烃<span class="f999">（西安交通大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=FcRjBFvZd8I%3D','K0iRyDnTGQQ%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/53/69/75/b8223c53b3c14f97948c2ecff3dcff52.png"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=FcRjBFvZd8I%3D','K0iRyDnTGQQ%3D')" target="_blank">一种网络群组安全通信的建立方法</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>电子通信</span>
+
+                                    <span class="p_i classify_62_icon"><i></i>计算机</span>
+
+                                </div>
+                                <h4>刘忆宁<span class="f999">（桂林电子科技大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=9Vo5pANuBZ8%3D','W41lmBFz6fg%3D')" target="_blank"> <img src="https://www.innocity.com//archivefiles/31/cf/ea/35c5e99abaa94af0840ecc1639c1ae39.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a onclick="gotoScmDataHomePage('patent_information','https://www.innocity.com/onlineweb/patent/zs/show?patentId=9Vo5pANuBZ8%3D','W41lmBFz6fg%3D')" target="_blank">一种安全云存储方法及系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>信息技术</span>
+
+                                </div>
+                                <h4>骆源<span class="f999">（上海交通大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=HlrSG0AeKZ0%3D" target="_blank"> <img src="https://www.innocity.com//archivefiles/c4/db/5d/d310679cdf644f95ad983ebefa9c2401.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=HlrSG0AeKZ0%3D" target="_blank">一种大功率空气耦合超声振动换能器</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_60_icon"><i></i>新一代信息技术</span>
+
+                                </div>
+                                <h4>殷振<span class="f999">（苏州科技学院）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=oqyjtlfW2cA%3D" target="_blank"> <img src="https://www.innocity.com//archivefiles/c4/db/5d/d310679cdf644f95ad983ebefa9c2401.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=oqyjtlfW2cA%3D" target="_blank">犬猫一次性使用宫颈细胞刷</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_63_icon"><i></i>新一代信息技术</span>
+
+                                </div>
+                                <h4>宋厚辉<span class="f999">（浙江农林大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="patent_wrap">
+                                <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=2e5GC26lpWA%3D" target="_blank"> <img src="https://www.innocity.com//archivefiles/c4/db/5d/d310679cdf644f95ad983ebefa9c2401.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=2e5GC26lpWA%3D" target="_blank">一种激光光源的光纤耦合系统</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_62_icon"><i></i>新一代信息技术</span>
+
+                                </div>
+                                <h4>赵辉<span class="f999">（中北大学）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="mr_0">
+                            <div class="patent_wrap">
+                                <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=D%2FXeF4Jqbfs%3D" target="_blank"> <img src="https://www.innocity.com//archivefiles/c4/db/5d/d310679cdf644f95ad983ebefa9c2401.jpg"></a>
+
+                                <div class="whiter_part">
+                                    <h3>
+                                        <a href="https://www.innocity.com/onlineweb/patent/zs/show?patentId=D%2FXeF4Jqbfs%3D" target="_blank">一种大功率空气耦合超声振动换能器</a>
+                                    </h3>
+
+
+                                    <span class="p_i classify_61_icon"><i></i>新一代信息技术</span>
+
+                                </div>
+                                <h4>殷振<span class="f999">（苏州科技学院）</span>
+                                </h4>
+                                <p>
+
+                                    <em>待商议</em>
+
+
+
+
+                                    普通許可
+
+                                </p>
+                                <br>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <a href="/egrantweb/tec-market/tec?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" class="read_more" target="_blank">查看更多</a>
+        </div>
+    </div>
+
+    <div class="intro_block bg_lt_white" id="list2">
+        <div class="intro_block_cont">
+            <h2>科技政策</h2>
+            <div class="news_box">
+                <div class="news_banner" id="news_banner">
+
+
+
+                    <a onclick="gotoNews()" class="d1" style="background: url(&quot;/js/static/adminlte//js/static/adminlte/img/index/temporary/news/22.jpg&quot;) center center / cover no-repeat; display: block; z-index: 1;"></a>
+                    <a onclick="gotoNews()" class="d1" style="background: url(&quot;/js/static/adminlte//js/static/adminlte/img/index/temporary/news/11.jpg&quot;) center center / cover no-repeat; display: none; z-index: 2;"></a>
+                    <a onclick="gotoNews()" class="d1" style="background: url(&quot;/js/static/adminlte//js/static/adminlte/img/index/temporary/news/33.jpg&quot;) center center / cover no-repeat; display: none; z-index: 2;"></a>
+                    <a onclick="gotoNews()" class="d1" style="background: url(&quot;/js/static/adminlte//js/static/adminlte/img/index/temporary/news/44.jpg&quot;) center center / cover no-repeat; display: none; z-index: 2;"></a>
+                    <a onclick="gotoNews()" class="d1" style="background: url(&quot;/js/static/adminlte//js/static/adminlte/img/index/temporary/news/55.jpg&quot;) center center / cover no-repeat; display: none; z-index: 2;"></a>
+                    <div class="d2" id="news_banner_id">
+                        <ul>
+                            <li class="nuw"></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div id="dynamic" class="fr">
+                    <ul id="dynamic_tit">
+
+                        <li class="current">公告公示</li>
+
+                        <li>政策法规</li>
+
+                        <li>本地政策</li>
+
+                        <li>科技信息</li>
+
+                        <li>下载中心</li>
+
+                        <a class="a_hv" href="/egrantweb/ply/getplydstatute?sysName=jasstms&amp;area_no=ynGfaT0DskA%3D" target="_blank">查看更多&gt;&gt;</a>
+                    </ul>
+                    <div id="dynamic_lt">
+
+                        <ul style="display:block;">
+
+                            <li>
+                                <a onclick="openNews(this)">吉安市科技业务管理系统培训课件（面向单位管理员、申请人） </a>
+                                <span>2021-09-08</span>
+                                <input type="hidden" name="news_url" value="">
+                                <input type="hidden" name="news_data_sys_id" value="10078854">
+                                <input type="hidden" name="news_data_open_id" value="1261">
+                                <input type="hidden" name="news_notice_type" value="02">
+                                <input type="hidden" name="news_file_code" value="00aa0d6052004753bee6bfb35f68ae48">
+                            </li>
+
+                        </ul>
+
+                        <ul>
+
+                        </ul>
+
+                        <ul>
+
+                        </ul>
+
+                        <ul>
+
+                        </ul>
+
+                        <ul>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
 
         </div>
     </div>
-</div>
-</#html:if>
-</#html:foreach>
+
+    <section class="sec-kc"></section>
+    <section class="sec-cx"></section>
+    <section class="sec-js"></section>
+    <section class="sec-kj"></section>
+</main>
+
 
 <% } %>
